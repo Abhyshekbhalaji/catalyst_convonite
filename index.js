@@ -15,9 +15,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Route registrations
-app.use("/auth", authRoutes);
-app.use("/users", userRoutes);
-app.use("/products", productRoutes);
+app.use('/', authRoutes);
+app.use("/", userRoutes);
+app.use("/", productRoutes);
+
 
 
 // Default root
